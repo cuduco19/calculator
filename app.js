@@ -120,13 +120,3 @@ window.addEventListener("keydown", function(event) {
             break;
     }
 });
-
-// 🚀 PERMANENT FOCUS FIX: Resolves browser "ghost focus" bugs on page refresh.
-// Briefly blurring and re-focusing guarantees a live, blinking cursor ready for immediate typing.
-window.addEventListener("load", () => {
-    const n1 = document.getElementById("num1");
-    if (n1) {
-        n1.blur();  // 1. Wipe out any broken browser caching/ghost states
-        n1.focus(); // 2. Hard-force a fresh, live typing cursor
-    }
-});
