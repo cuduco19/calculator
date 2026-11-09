@@ -57,18 +57,31 @@ function divide(){
 
 
 function resetCalculator(){
-     let n1 = document.getElementById("num1").value = '';
-     document.getElementById("num2").value = '';
-     document.getElementById("result").innerText = 'Result: 0.00';
+    let n1 = document.getElementById("num1");
+
+    // Clear all values first
+    n1.value = '';
+    document.getElementById("num2").value = '';
+    document.getElementById("result").innerText = 'Result: 0.00';
+
+    // Bring the user's cursor back home at the very end
+    n1.focus(); 
 }
 
 // ⌨️ Keyboard shortcuts listener
 window.addEventListener("keydown", function(event) {
     //Avoid triggering shortcuts if the user is typing inside the input fields
     if(document.activeElement.tagName == "INPUT") {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Stop any default browser form bugs
+
+            document.activeElement.blur(); // 🏃‍♂️ Drop focus instantly so global hotkeys unlock!
+        }
+
         if (event.key === "Escape") {
             resetCalculator();
         }
+        
         return; 
     }
 
