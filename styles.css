@@ -1,3 +1,4 @@
+/*
 body {
     font-family: sans-serif;
     background: #f9fafb;
@@ -38,3 +39,133 @@ button {
     margin-top: 10px;
     font-weight: bold;
 }
+
+*/
+
+/* 1. Base Setup & Centering */
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b); /* Deep dark slate background */
+    --card-bg: rgba(30, 41, 59, 0.7); /* Semi-transparent container */
+    --accent-color: #38bdf8; /* Sleek sky blue for buttons */
+    --accent-hover: #0ea5e9;
+    --clear-color: #ef4444; /* Crimson red for the clear button */
+    --clear-hover: #dc2626;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --radius: 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. The Calculator Container */
+.calculator {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    color: var(--text-primary);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+/* 3. Sleek Inputs */
+input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Glow effect when user clicks into an input box */
+input[type="number"]:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* 4. Operator Button Layout */
+.operators {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for +, -, *, / */
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 5. Button Styling */
+button {
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+/* Operator Buttons */
+.operators button {
+    background: var(--accent-color);
+    color: #0f172a; /* Dark text for contrast against bright blue */
+}
+
+.operators button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.operators button:active {
+    transform: translateY(1px);
+}
+
+/* Clear Button Styling */
+.clear-btn {
+    width: 100%;
+    font-size: 1rem;
+    background: var(--clear-color);
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.clear-btn:hover {
+    background: var(--clear-hover);
+}
+
+/* 6. Dynamic Result Panel */
+#result {
+    background: rgba(15, 23, 42, 0.4);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    border-left: 4px solid var(--accent-color);
+}
+
+
