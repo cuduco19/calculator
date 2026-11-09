@@ -119,7 +119,7 @@ window.addEventListener("load", function() {
         
         // 2. Put the genuine typing cursor back in with a clean slate
         setTimeout(function() {
-            n1.focus();
+           
         }, 10); // 50ms gives the browser enough time to finish rendering
     }
 });
