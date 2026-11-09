@@ -109,3 +109,17 @@ window.addEventListener("keydown", function(event) {
             break;
     }
 });
+
+// 🚀 PERMANENT REFRESH FOCUS FIX
+window.addEventListener("load", function() {
+    let n1 = document.getElementById("num1");
+    
+    if (n1) {
+        n1.blur(); // 1. Wipe out the broken "ghost" focus state
+        
+        // 2. Put the genuine typing cursor back in with a clean slate
+        setTimeout(function() {
+            n1.focus();
+        }, 10); // 50ms gives the browser enough time to finish rendering
+    }
+});
