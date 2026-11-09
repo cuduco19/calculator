@@ -12,12 +12,12 @@
         <h2>Basic Calculator</h2>
         <input id="num1" type="number" placeholder="Enter first number">
         <input id="num2" type="number" placeholder="Enter second number">
-        <button class="clear-btn" onclick="resetCalculator()">Clear</button>
+        <button class="btn-reset" onclick="resetCalculator()">Clear</button>
         <div class="operators">
-            <button onclick="add()">+</button>
-            <button onclick="subtract()">−</button>
-            <button onclick="multiply()">×</button>
-            <button onclick="divide()">÷</button>
+            <button id="btn-add">+</button>
+            <button id="btn-subtract">−</button>
+            <button id="btn-multiply">×</button>
+            <button id="btn-divide">÷</button>
         </div>
         <div id="result">Result: 0</div>
     </div>

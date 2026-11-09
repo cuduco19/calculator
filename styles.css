@@ -144,7 +144,7 @@ button {
 }
 
 /* Clear Button Styling */
-.clear-btn {
+.btn-reset {
     width: 100%;
     font-size: 1rem;
     background: var(--clear-color);
@@ -152,7 +152,7 @@ button {
     margin-bottom: 1.5rem;
 }
 
-.clear-btn:hover {
+.btn-reset:hover {
     background: var(--clear-hover);
 }
 

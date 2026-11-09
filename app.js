@@ -68,6 +68,17 @@ function resetCalculator(){
     n1.focus(); 
 }
 
+// 🎯 Clean element clock listeners (replacing inline onclick="")
+document.addEventListener("DOMContentLoaded", function() {
+    //Assuming your HTML button have matching IDs
+    document.getElementById("btn-add").addEventListener("click", add);
+    document.getElementById("btn-subtract").addEventListener("click", subtract);
+    document.getElementById("btn-multiply").addEventListener("click", multiply);
+    document.getElementById("btn-divide").addEventListener("click", divide);
+    document.getElementById("btn-reset").addEventListener("click", resetCalculator);
+
+});
+
 // ⌨️ Keyboard shortcuts listener
 window.addEventListener("keydown", function(event) {
     //Avoid triggering shortcuts if the user is typing inside the input fields
