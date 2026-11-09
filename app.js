@@ -37,7 +37,7 @@ function divide(){
     console.log("[a, b]: ", [a,b]);
     
     if(b == 0){
-        alert("Cannot divide by zero!");
+        document.getElementById("result").innerText =`Result: Error (Div by 0)`;
         return;
     }
 
@@ -47,7 +47,7 @@ function divide(){
 
 
 function resetCalculator(){
-     document.getElementById("num1").value = ``;
-     document.getElementById("num2").value = ``;
-     document.getElementById("result").innerText = `Result: 0`;
+     document.getElementById("num1").value = '';
+     document.getElementById("num2").value = '';
+     document.getElementById("result").innerText = 'Result: 0';
 }
