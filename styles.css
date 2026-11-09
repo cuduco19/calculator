@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    background: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    text-align: center;
+}
+
+.operators {
+    margin-top: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+button { 
+    padding: 10px; 
+    width: 48%; 
+    margin: 4px 1%; 
+    font-size: 16px;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
