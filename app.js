@@ -18,7 +18,7 @@ function add(){
     let [a, b] = getValues();
     console.log("[a, b]: ", [a,b]);
     
-    let answer = a / b;
+    let answer = a + b;
     document.getElementById("result").innerText = `Result: ${answer.toFixed(2)}`;
     console.log("Result of a + b: ", answer.toFixed(2));
 

@@ -102,12 +102,6 @@ input[type="number"] {
     transition: all 0.2s ease;
 }
 
-/* Add this right below your input[type="number"] block */
-input[type="number"]::placeholder {
-    color: var(--text-secondary);
-    opacity: 0.8;
-}
-
 /* Glow effect when user clicks into an input box */
 input[type="number"]:focus {
     border-color: var(--accent-color);
@@ -171,7 +165,7 @@ button {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--accent-color);
-    border-left: 4px solid var(--accent-color);
+    border-inline-start: 4px solid var(--accent-color);
 }
 
 
