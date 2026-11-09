@@ -17,7 +17,7 @@ function add(){
 
 }
 
-function substract(){
+function subtract(){
     let [a, b] = getValues();
     console.log("[a, b]: ", [a,b]);
     
@@ -43,4 +43,11 @@ function divide(){
 
     document.getElementById("result").innerText = `Result: ${a / b}`;
     console.log("Result of a / b: ", a / b);
+}
+
+
+function resetCalculator(){
+     document.getElementById("num1").value = ``;
+     document.getElementById("num2").value = ``;
+     document.getElementById("result").innerText = `Result: 0`;
 }
