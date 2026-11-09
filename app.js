@@ -57,7 +57,42 @@ function divide(){
 
 
 function resetCalculator(){
-     document.getElementById("num1").value = '';
+     let n1 = document.getElementById("num1").value = '';
      document.getElementById("num2").value = '';
      document.getElementById("result").innerText = 'Result: 0.00';
 }
+
+// ⌨️ Keyboard shortcuts listener
+window.addEventListener("keydown", function(event) {
+    //Avoid triggering shortcuts if the user is typing inside the input fields
+    if(document.activeElement.tagName == "INPUT") {
+        if (event.key === "Escape") {
+            resetCalculator();
+        }
+        return; 
+    }
+
+     // Map keys to their operations when typing globally
+    switch (event.key){
+        case "+":
+            add();
+            break;
+        case "-":
+            subtract();
+            break;
+        case "*":
+            multiply();
+            break;
+        case "/":
+            event.preventDefault(); // Prevents the browser''s quick-find shortcut from opening
+            divide();
+            break;
+        case "Escape":
+        case "c":
+        case "C":
+        case "r":
+        case "R":
+            resetCalculator();
+            break;
+    }
+});
