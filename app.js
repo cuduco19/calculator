@@ -16,34 +16,27 @@ function getValues(){
 
 function add(){
     let [a, b] = getValues();
-    console.log("[a, b]: ", [a,b]);
     
     let answer = a + b;
     document.getElementById("result").innerText = `Result: ${answer.toFixed(2)}`;
-    console.log("Result of a + b: ", answer.toFixed(2));
 
 }
 
 function subtract(){
     let [a, b] = getValues();
-    console.log("[a, b]: ", [a,b]);
     
     let answer = a - b;
     document.getElementById("result").innerText = `Result: ${answer.toFixed(2)}`;
-    console.log("Result of a - b: ", answer.toFixed(2));
 }
 
 function multiply(){
     let [a, b] = getValues();
-    console.log("[a, b]: ", [a,b]);
     
     let answer = a * b;
     document.getElementById("result").innerText = `Result: ${answer.toFixed(2)}`;
-    console.log("Result of a * b: ", answer.toFixed(2));
 }
 function divide(){
     let [a, b] = getValues();
-    console.log("[a, b]: ", [a,b]);
     
     if(b == 0){
         document.getElementById("result").innerText =`Result: Error (Div by 0)`;
@@ -52,7 +45,6 @@ function divide(){
 
     let answer = a / b;
     document.getElementById("result").innerText = `Result: ${answer.toFixed(2)}`;
-    console.log("Result of a / b: ", answer.toFixed(2));
 }
 
 

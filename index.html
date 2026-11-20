@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+    <meta name="description" content="A fast, keyboard-accessible basic calculator built with HTML, CSS, and JavaScript.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script> 
 </head>
 <body>
-    <div class="calculator">
-        <h2>Basic Calculator</h2>
+    <main class="calculator">
+        <h1>Basic Calculator</h1>
         <input id="num1" type="number" placeholder="Enter first number" autofocus>
         <input id="num2" type="number" placeholder="Enter second number">
         <button class="btn-reset" onclick="resetCalculator()">Clear</button>
@@ -20,6 +23,6 @@
             <button id="btn-divide">÷</button>
         </div>
         <div id="result">Result: 0.00</div>
-    </div>
+    </main>
 </body>
 </html>
