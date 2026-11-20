@@ -15,13 +15,13 @@
         <h1>Basic Calculator</h1>
         <input id="num1" type="number" placeholder="Enter first number" autofocus>
         <input id="num2" type="number" placeholder="Enter second number">
-        <button class="btn-reset" onclick="resetCalculator()">Clear</button>
         <div class="operators">
-            <button type="button" id="btn-add">+</button>
-            <button type="button" id="btn-subtract">−</button>
-            <button type="button" id="btn-multiply">×</button>
-            <button type="button" id="btn-divide">÷</button>
+            <button type="button" id="btn-add" aria-label="Add">+</button>
+            <button type="button" id="btn-subtract" aria-label="Subtract">−</button>
+            <button type="button" id="btn-multiply" aria-label="Multiply">×</button>
+            <button type="button" id="btn-divide" aria-label="Divide">÷</button>
         </div>
+        <button type="button" id="btn-reset" class="btn-reset">Clear</button>
         <div id="result">Result: 0.00</div>
     </main>
 </body>
