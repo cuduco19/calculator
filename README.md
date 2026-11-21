@@ -20,7 +20,7 @@ A sleek, keyboard-accessible web calculator featuring a frosted-glass UI, modula
 ## Project Structure
 
 ```text
-simple-calculator/
+calculator/
 ├── index.html              # Semantic HTML5 markup
 ├── styles/
 │   ├── variables.css       # CSS custom properties (colors, gradients, radius)
